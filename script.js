@@ -11,7 +11,7 @@ function flipCard() {
   if (this === firstCard) return;
 
   moves--;
-  document.getElementsByClassName("moves").innerHTML = moves;
+  document.getElementById("moves").innerHTML = moves;
   if (moves === 0) {
     document.querySelector(".popup").style.display = "flex";
     document.querySelector(".popup > div > h2").innerHTML = "GAME OVER <br> You Lose!! &#128577";
