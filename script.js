@@ -11,10 +11,10 @@ function flipCard() {
   if (this === firstCard) return;
 
   moves--;
-  document.querySelector("span").innerHTML = moves;
-  if(moves === 0){
-    document.querySelector(".popup").style.display="flex";
-    document.querySelector(".popup > div > h2").innerHTML="GAME OVER <br> You Lose!! &#128577";
+  document.getElementsByClassName("moves").innerHTML = moves;
+  if (moves === 0) {
+    document.querySelector(".popup").style.display = "flex";
+    document.querySelector(".popup > div > h2").innerHTML = "GAME OVER <br> You Lose!! &#128577";
   }
 
   this.classList.add('flip');
@@ -33,10 +33,10 @@ function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
   isMatch ? disableCards() : unflipCards();
 
-  if(isMatch) match++;
-  if(match === 8){    
-    document.querySelector(".popup").style.display="flex";
-    document.querySelector(".popup > div > h2").innerHTML="Congratulations... <br> You Won!! &#128515"
+  if (isMatch) match++;
+  if (match === 8) {
+    document.querySelector(".popup").style.display = "flex";
+    document.querySelector(".popup > div > h2").innerHTML = "Congratulations... <br> You Won!! &#128515"
   }
 }
 
